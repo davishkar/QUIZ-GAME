@@ -52,7 +52,7 @@ const questions = [
 ```
 
 ## Contributors
-- Avishkar (GitHub: [Avishkar](https://github.com/avishkarmnnit))
+- Avishkar (GitHub: [Avishkar](https://github.com/davishkar))
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
