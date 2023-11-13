@@ -1,0 +1,125 @@
+/* Reset some default browser styles */
+body, h1, p, ul, form {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color for the entire page */
+body {
+    background-color: #f0f0f0;
+    font-family: 'Itim', cursive;
+}
+
+/* Style the start page */
+.start-page {
+    text-align: center;
+    padding: 20px;
+}
+
+.start-page h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+#start-form {
+    background-color: #fff;
+    padding: 70px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    
+}
+
+button#start-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Style the quiz container */
+.quiz-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: none; /* Hide the quiz container by default */
+}
+
+.quiz-container h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+#question-container {
+    margin-bottom: 20px;
+}
+
+#question {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+ul#options {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul#options li {
+    margin-bottom: 10px;
+}
+
+button#next-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Style the end page */
+.end-page {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: none; /* Hide the end page by default */
+}
+
+.end-page h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Style the player name and score */
+#player-name,
+#player-score {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Style form validation error messages */
+input:invalid {
+    border-color: #000000;
+}
