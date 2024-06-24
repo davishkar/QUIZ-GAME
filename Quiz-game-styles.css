@@ -1,125 +1,142 @@
-/* Reset some default browser styles */
-body, h1, p, ul, form {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
 }
 
-/* Set a background color for the entire page */
-body {
-    background-color: #f0f0f0;
-    font-family: 'Itim', cursive;
-}
-
-/* Style the start page */
-.start-page {
-    text-align: center;
+.container {
+    width: 70%;
+    max-width: 600px;
+    margin: auto;
     padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
 }
 
-.start-page h1 {
-    font-size: 32px;
+h1 {
+    font-size: 28px;
+    color: #333;
+    text-align: center;
     margin-bottom: 20px;
 }
 
-#start-form {
-    background-color: #fff;
-    padding: 70px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    display: inline-block;
+h2 {
+    font-size: 20px;
+    color: #555;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 15px;
 }
 
 label {
     display: block;
-    margin-bottom: 10px;
     font-weight: bold;
+    margin-bottom: 5px;
 }
 
 input[type="text"],
 input[type="number"],
 input[type="email"] {
-    width: 100%;
+    width: 95%;
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
-    border-radius: 20px;
-    
+    border-radius: 4px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-button#start-button {
-    background-color: #007bff;
-    color: #fff;
+/* Button Styles */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: #fff;
+    font-size: 18px;
     cursor: pointer;
+    border-radius: 4px;
+    text-align: center;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Style the quiz container */
-.quiz-container {
-    text-align: center;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    display: none; /* Hide the quiz container by default */
+.btn:hover {
+    background: linear-gradient(135deg, #5a75e4, #8a4ec4);
+}
+
+/* Quiz Styles */
+.quiz-container, .end-page {
+    display: none;
 }
 
 .quiz-container h1 {
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-#question-container {
+    font-size: 24px;
     margin-bottom: 20px;
 }
 
 #question {
     font-size: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
-ul#options {
-    list-style-type: none;
+#options {
+    list-style: none;
     padding: 0;
 }
 
-ul#options li {
+#options li {
     margin-bottom: 10px;
 }
 
-button#next-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
+#options input[type="radio"] {
+    margin-right: 10px;
 }
 
-/* Style the end page */
-.end-page {
-    text-align: center;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    display: none; /* Hide the end page by default */
-}
-
+/* End Page Styles */
 .end-page h1 {
-    font-size: 28px;
+    font-size: 24px;
     margin-bottom: 20px;
 }
 
-/* Style the player name and score */
-#player-name,
-#player-score {
+.end-page p {
     font-size: 20px;
-    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
-/* Style form validation error messages */
-input:invalid {
-    border-color: #000000;
+/* Utility Classes */
+.hidden {
+    display: none;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
